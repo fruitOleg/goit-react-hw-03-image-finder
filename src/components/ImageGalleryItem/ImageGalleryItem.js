@@ -4,7 +4,7 @@ export const ImageGalleryItem = ({ image }) => {
   return (
     <StyledImageGalleryItem>
       <a href={image.largeImageURL}>
-        <img src={image.webformatURL} alt="" />
+        <img src={image.webformatURL} alt="error" />
       </a>
     </StyledImageGalleryItem>
   );
