@@ -25,7 +25,7 @@ export class App extends Component {
       prevState.query !== this.state.query ||
       prevState.page !== this.state.page
     ) {
-      const images = await fetchImages(
+       const images = await fetchImages(
         this.state.query.slice(this.state.query.indexOf('/') + 1),
         this.state.page
       );

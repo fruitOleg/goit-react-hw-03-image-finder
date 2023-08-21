@@ -8,7 +8,13 @@ import {
 export const Searchbar = ({ onSubmit }) => {
   return (
     <Header>
-      <SearchForm onSubmit={onSubmit}>
+      <SearchForm
+        onSubmit={evt => {
+          evt.preventDefault();
+          onSubmit(evt.target.elements.query.value);
+          evt.target.reset();
+        }}
+      >
         <SearchFormButton type="submit"></SearchFormButton>
         <SearchFormInput
           type="text"
